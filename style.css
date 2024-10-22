@@ -403,18 +403,17 @@ header{
             color: var(--black);
             border-radius: 5px;
             width: 350px;
-            padding: 3
-            0px;
+            padding: 30px;
             .comment-information{
                 display: flex;
                 justify-content: space-around;
                 img{
                     border-radius: 50%;
-                    margin: 45px 20px 0 0;
+                    
                 }
                 div{
                     display: block;
-                    margin-top: 50px;
+                    margin-top: 10px;
                     h4{
                         color: var(--name);
                         padding: 0;
@@ -428,6 +427,13 @@ header{
                         color: var(--yellow);
                     }
 
+                }
+
+            }
+            .comment-text{
+                margin-top: 20px;
+                div{
+                    margin-top: 50px;
                 }
 
             }
