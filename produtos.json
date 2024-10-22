@@ -1,0 +1,126 @@
+{
+    "produtos":{
+        "lancamentos":[
+
+            {
+                "id":1,
+                "imagem":"./img/modelo01.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":2,
+                "imagem":"./img/modelo02.png",
+                "classificacao":4,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":3,
+                "imagem":"./img/modelo03.png",
+                "classificacao":3,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":4,
+                "imagem":"./img/modelo04.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            }
+    
+        ],
+        "destaques":[
+
+            {
+                "id":1,
+                "imagem":"./img/modelo01.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":2,
+                "imagem":"./img/modelo02.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":3,
+                "imagem":"./img/modelo03.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":4,
+                "imagem":"./img/modelo04.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            }
+    
+        ],
+        "outlet":[
+
+            {
+                "id":1,
+                "imagem":"./img/modelo01.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":2,
+                "imagem":"./img/modelo02.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":3,
+                "imagem":"./img/modelo03.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            },
+            {
+                "id":4,
+                "imagem":"./img/modelo04.png",
+                "classificacao":5,
+                "descricao": "Lorem ipsum quia dolor sit amet",
+                "ref": "pdc202",
+                "preco": "55,90",
+                "parcela":"10x de R$ 6,30"
+            }
+    
+        ]
+        
+
+    }
+}
