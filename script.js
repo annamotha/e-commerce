@@ -25,7 +25,8 @@ dots.forEach((dot, index) => {
 });
 
 
-/* menu links */
+
+//menu links
 document.getElementById('menuToggle').addEventListener('click', function() {
     var menu = document.getElementById('menu');
     

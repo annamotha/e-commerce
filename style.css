@@ -649,9 +649,93 @@ footer{
 
 }
 
+@media (min-width: 1200px) and (max-width: 1449px){
+    .links{
+        ul{
+            padding-left: 20px;
+        }
+        li{
+            margin: 0 !important;
+            a{
+                font-size: 14px ;
+            }
+        }
+    }
+    .end-header{
+        width: 35% !important;           
+        .login{
+            .perfil{
+                display: block;
+            }
+            a{
+                display: none;
+            }
+            p{
+                display: none;
+            }
+        }
+        .shopping-cart{
+            padding-right:0 !important;
 
-/* telas menores */
-@media (max-width: 480px) {
+            a{
+                margin-top: -1%;
+            }
+            
+        }   
+    }
+
+    .category{
+        padding: 5% 5%;
+        .text{
+            margin-top: -70%;
+        }
+    }
+
+    .header-footer{  
+        div{
+            margin: 12px 1% 0 1% !important;
+        } 
+        form{
+            margin-top: 20px;
+            input{
+                padding: 5px 20px !important ;
+                margin: 5px;
+            }
+            .cadastro{
+                border: none;
+                
+            }
+        }
+    }
+
+    .main-footer{
+        .image{
+            div{
+                img{
+                    width: 450px
+                }
+            }
+            .whatsapp{
+                img{
+                    width: 350px;
+                }
+                .whatsapp-footer{
+                    h2{
+                        font-size: 50px !important;
+                    }
+                    p{
+                        margin: 30px !important;
+                    }
+                }
+            }
+        }
+        .information-footer{
+            padding: 0 100px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
     header{    
         justify-content: space-evenly;  
         button{
@@ -677,7 +761,124 @@ footer{
             
             
         }
+        .end-header{
+            width: 35% !important;           
+            .login{
+                .perfil{
+                    display: block;
+                }
+                a{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+            }
+            .shopping-cart{
+                padding-right:0 !important;
+    
+                a{
+                    margin-top: -1%;
+                }
+                
+            }   
+        }
+    }
+    .information{
+        p{
+            font-size: 14px;
+        }
+    }
 
+    .category{
+        padding: 5% 5%;
+        .text{
+            margin-top: -90% !important;
+            h2{
+                font-size: 80px;
+            }
+        }
+    }
+    
+    .header-footer{  
+        padding-bottom: 150px !important;
+        p{
+            margin-top: 20%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+
+            input{
+                margin: 5px;
+
+            }
+        }
+    }
+
+    .main-footer{
+        .image{
+            border: solid 12px var(--white) !important;
+            gap: 15px !important;
+            margin-left: 0 ;
+            img{
+                width: 290px;
+            }
+           .whatsapp{
+                img{
+                    width: 250px;
+                }
+                .whatsapp-footer{
+                    h2{
+                        font-size: 45px !important;
+                    }
+                    p{
+                        margin-left: 0 !important;
+                    }
+                }
+
+           }
+        }
+        .information-footer{
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr; 
+        }
+    }
+    .LOREM{
+        padding-left: 8% !important;
+    }
+    .footer-end{
+        margin: 0 4%;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 767px){
+    header{    
+        justify-content: space-evenly;  
+        button{
+            display: block;
+            border: none;
+            background-color: var(--white);
+        } 
+        #menu {
+            display: none;
+        }
+        
+        #menu.active {
+            display: flex; 
+            width: 100%;
+            flex-direction: column;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        padding: 5px 0;
+                    }
+                }
+            
+            
+        }
+    
         .end-header{
             width: 30%;
             .favorite{
@@ -705,8 +906,142 @@ footer{
             }   
         }
     }
-    .produts{
-        flex-direction: column;
+    
+    .information{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;  
+        gap: 20px;
+        div{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+    .category{
+        padding: 5% 5%;
+        .text{
+            margin-top: -90% !important;
+            h2{
+                font-size: 65px;
+            }
+        }
+    }
+
+
+    .header-footer{  
+        padding-bottom: 150px !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+
+        img{
+            height: 100%;
+            margin-top: 20%;
+        }
+        p{
+            margin-top: 20%;
+        }
+        form{
+            grid-column: 2 / 3; 
+            grid-row: 2 / 3;
+            display: flex;
+            flex-direction: column;
+
+            input{
+                margin: 5px;
+
+            }
+        }
+    }
+
+    .main-footer{
+        .image{
+            border: solid 12px var(--white) !important;
+            gap: 15px !important;
+            margin-left: 0 ;
+            img{
+                width: 290px;
+            }
+           .whatsapp{
+                img{
+                    width: 250px;
+                }
+                .whatsapp-footer{
+                    h2{
+                        font-size: 45px !important;
+                    }
+                    p{
+                        margin-left: 0 !important;
+                    }
+                }
+
+           }
+        }
+        .information-footer{
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr; 
+        }
+    }
+    .LOREM{
+        padding-left: 8% !important;
+    }
+    .footer-end{
+        margin: 0 4%;
+    }
+}
+@media(min-width: 400px) and (max-width: 749px){
+    header{    
+        justify-content: space-evenly;  
+        button{
+            display: block;
+            border: none;
+            background-color: var(--white);
+        } 
+        #menu {
+            display: none !important;
+        }
+        
+        #menu.active {
+            display: flex; 
+            width: 100%;
+            flex-direction: column;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        padding: 5px 0;
+                    }
+                }
+            
+            
+        }
+    
+        .end-header{
+            width: 30%;
+            .favorite{
+               display: none;
+            }            
+            .login{
+                .perfil{
+                    display: block;
+                }
+                a{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+            }
+            .shopping-cart{
+                padding-right:0;
+                a{
+                    margin-top: -1%;
+                }
+                .price{
+                    display: none;
+                }
+            }   
+        }
     }
     .information{
         display: grid;
@@ -718,6 +1053,97 @@ footer{
                 font-size: 15px;
             }
         }
+    }
+    .category{
+        padding: 5% 5%;
+        .text{
+            margin-top: -90% !important;
+            h2{
+                font-size: 45px;
+            }
+        }
+    }
+    .comments-black{
+        h1{
+            font-size: 40px !important;
+        }
+        h3{
+            font-size: 38px !important;
+        }
+        comments-box{
+            display: none;
+        }
+    }
+
+
+    .header-footer{  
+        padding-bottom: 150px !important;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            height: 100%;
+            margin-top: 10%;
+        }
+        p{
+            margin-top: 5%;
+        }
+        form{
+            grid-column: 2 / 3; 
+            grid-row: 2 / 3;
+            display: flex;
+            flex-direction: column;
+
+            input{
+                margin: 5px;
+
+            }
+        }
+    }
+
+    .main-footer{
+        .image{
+            flex-direction: column;
+            border: solid 12px var(--white) !important;
+            gap: 15px !important;
+            margin-left: 0 ;
+            margin-bottom: 50px;
+            img{
+                width: 315px;
+            }
+           .whatsapp{
+                img{
+                    width: 315px;
+                }
+                .whatsapp-footer{
+                    h2{
+                        font-size: 45px !important;
+                    }
+                    p{
+                        margin-left: 10% !important;
+
+                    }
+                }
+
+           }
+        }
+        .information-footer{
+            display: grid !important;
+            grid-template-columns: 1fr 1fr; 
+        }
+    }
+    .LOREM{
+        padding-left: 8% !important;
+    }
+    .footer-end{
+        margin: 0 4%;
+    }
+}
+
+/* telas menores */
+@media (max-width: 399px) {
+    .produts{
+        flex-direction: column;
     }
     .category{
         grid-template-columns: 1fr;
