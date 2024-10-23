@@ -8,10 +8,13 @@
 </head>
 <body>
     <header>
+        <button id="menuToggle" >
+            <img src="./img/icon-menu.png" alt="menu" width="40">
+        </button>
         <div class="logo">
             <img src="./img/logo.png" alt="LOGO" width="120">
         </div>
-        <div class="links">
+        <div class="links" id="menu">
             <ul>
                 <li class="news"><a href="#">NEWS</a></li>
                 <li><a href="#">CINTAS</a></li>
@@ -38,14 +41,14 @@
                 </a>
             </div>
             <div class="login">
-                <img src="./img/icon.png" alt="icon" width="22" height="22">
+                <a href="#" class="perfil"><img src="./img/icon.png" alt="icon" width="22" height="22"></a>
                 <a href="#">Login</a>
                 <p>|</p> 
                 <a href="#">Cadastre-se</a>
             </div>
             <div class="shopping-cart">
                 <a href="#">
-                    <img src="./img/shopping-cart.png" alt="Carrinho de compras" width="27" heigh="27">
+                    <img src="./img/shopping-cart.png" alt="Carrinho de compras" width="22" heigh="22">
                     <span class="items">0</span>
                 </a>
                 <span class="price">R$ 0,00</span>
@@ -72,13 +75,19 @@
                     <div class="dot"></div>
                     <div class="dot"></div>
                 </div>
-            
+                
             </div>
-            <script src="./script.js"></script>
         </section>
         <section class="lancamento">
             <div>
                 <p>Lançamentos</p>
+            </div>
+            <div class="dots">
+                <button id="prevL"><</button>
+                <div class="dot first"></div> 
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <button id="nextL">></button>
             </div>
             <div class="produts" id="produt-new">
                 
@@ -87,7 +96,7 @@
                 <a href="#"></a>
             </div>
         </section>
-
+        
         <section class="information">
             <div>
                 <img src="./img/box.png" alt="" width="65">
@@ -121,7 +130,7 @@
                 <a href="#"></a>
             </div>
         </section>
-
+        
         <section class="category">
             <div class="category-left">
                 <img src="./img/Camisola.jpg" alt="">
@@ -166,12 +175,12 @@
                 <h1>Depoimentos</h1>
                 <h3>O que as nossas clientes estao dizendo</h3>
                 <div class="comments-box" id="comments">
-                    <!-- <div class="comment">
+                    <div class="comment">
                         <div class="comment-information">
                             <img src="./img/user01.png" alt="Pessoa01" width="80" height="80">
                             <div>
                                 <h4>Eliana</h4>
-                                <p>Sao jose</p>
+                                <p>São José do Rio Preto - SP</p>
                                 <span>★ ★ ★ ★ ★</span>
                             </div>
                         </div>
@@ -184,93 +193,113 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <img src="" alt="">
-                        <div>
-                            <p>hfsdkjfksdj</p>
-                            <p>sjdfjdiojfisd</p>
-                            <span>jkdshfhdfo</span>
+                        <div class="comment-information">
+                            <img src="./img/user02.png" alt="Pessoa01" width="80" height="80">
+                            <div>
+                                <h4>Eliana</h4>
+                                <p>São José do Rio Preto - SP</p>
+                                <span>★ ★ ★ ★ ★</span>
+                            </div>
                         </div>
-                        <p></p>
+                        <div class="comment-text">
+                            <img src="./img/symbol0.png" width="15" height="15">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, odit.</p>
+                            <div>
+                                <img src="./img/symbol1.png" width="15" height="15">
+                            </div>
+                        </div>
                     </div>
                     <div class="comment">
-                        <img src="#" alt="">
-                        <div>
-                            <p>hfsdkjfksdj</p>
-                            <p>sjdfjdiojfisd</p>
-                            <span>jkdshfhdfo</span>
+                        <div class="comment-information">
+                            <img src="./img/user03.png" alt="Pessoa01" width="80" height="80">
+                            <div>
+                                <h4>Eliana</h4>
+                                <p>São José do Rio Preto - SP</p>
+                                <span>★ ★ ★ ★ ★</span>
+                            </div>
                         </div>
-                        <p></p>
+                        <div class="comment-text">
+                            <img src="./img/symbol0.png" width="15" height="15">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, odit.</p>
+                            <div>
+                                <img src="./img/symbol1.png" width="15" height="15">
+                            </div>
+                        </div>
                     </div>
-                </div> -->
-                </div>                  
-                <div class="dots-comment"></div>
+                </div>
+            </div>                  
+            <div class="dots-comment">
+                <div class="dot first"></div> 
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
-        </section>
-        <script src="./depoimentos.js"></script>
-    </main>
-    <footer>
-        <div class="header-footer">
-            <img src="./img/logo-cinza.png" alt="logo" width="180">
+        </div>
+    </section>
+    <script src="./depoimentos.js"></script>
+</main>
+<footer>
+    <div class="header-footer">
+        <img src="./img/logo-cinza.png" alt="logo" width="180">
+        <div>
+            <p>Cadastre-se o seu e-mail e <b>ganhe <br>10% de desconto</b> na sua primeira compra</p>
+            
+        </div>
+        <form>
+            <input type="text" placeholder="NOME">
+            <input type="email" placeholder="E-MAIL">
+            <input class="cadastro" type="submit" value="CADASTRAR">
+        </form>
+    </div>
+    <div class="main-footer">
+        <div class="image">
             <div>
-                <p>Cadastre-se o seu e-mail e <b>ganhe <br>10% de desconto</b> na sua primeira compra</p>
-
+                <img src="./img/slide02.jpg" alt="imagem da loja" width="850" height="200" >
             </div>
-            <form>
-                <input type="text" placeholder="NOME">
-                <input type="email" placeholder="E-MAIL">
-                <input class="cadastro" type="submit" value="CADASTRAR">
-            </form>
-        </div>
-        <div class="main-footer">
-            <div class="image">
-                <div>
-                    <img src="./img/slide02.jpg" alt="imagem da loja" width="850" height="200" >
-                </div>
-                <div class="whatsapp">
-                    <img src="./img/whatsapp.png" alt="contato" width="500" height="200">
-                    <div class="whatsapp-footer">
-                        <h2>Alguma duvida</h2>
-                        <p>Entre em contato pelo nosso <b>whatsapp (22)99898-9898</b></p>
-                    </div>
-                </div>
-            </div>
-            <div class="media">
-                <a href="#"><img src="./img/icon-face.png" alt="facebook" width="30" ></a>
-                <a href="#"><img src="./img/icon-insta.png" alt="instagram" width="30"></a>
-                <a href="#"><img src="./img/icon-youtube.png" alt="youtube" width="30"></a>
-            </div>
-            <div class="information-footer">
-                <div>
-                    <p><b>Institucional</b></p>
-                    <ul>
-                        <li><a href="#">Quem somos</a></li>
-                        <li><a href="#">Loja Física</a></li>
-                        <li><a href="#">Central de ajuda</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">PROCON-RJ</a></li>
-                    </ul>
-                </div>
-                <div class="contact">
-                    <p><b>Contato</b></p>
-                    <p>Segunda a sexta de 7 as 17h</p>
-                    <p>(22) 2522-2222</p>
-                    <p>(22) 99999-9999</p>
-                    <p>contato@teste.com.br</p>
-                </div>
-                <div>
-                    <p><b>Formas de pagamento</b></p>
-                    <img src="./img/pagamento.png" alt="formas de pagamento">
-                </div>
-                <div>
-                    <p><b>Forma de entrega</b></p>
-                    <img src="./img/correios.png" alt="correio">
-                </div>
-                <div>
-                    <p><b>Segurança e qualidade</b></p>
-                    <img src="./img/segurança.png" alt="Segurança e qualidade" width="160">
+            <div class="whatsapp">
+                <img src="./img/whatsapp.png" alt="contato" width="500" height="200">
+                <div class="whatsapp-footer">
+                    <h2>Alguma duvida</h2>
+                    <p>Entre em contato pelo nosso <b>whatsapp (22)99898-9898</b></p>
                 </div>
             </div>
         </div>
+        <div class="media">
+            <a href="#"><img src="./img/icon-face.png" alt="facebook" width="30" ></a>
+            <a href="#"><img src="./img/icon-insta.png" alt="instagram" width="30"></a>
+            <a href="#"><img src="./img/icon-youtube.png" alt="youtube" width="30"></a>
+        </div>
+        <div class="information-footer">
+            <div>
+                <p><b>Institucional</b></p>
+                <ul>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Loja Física</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">PROCON-RJ</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <p><b>Contato</b></p>
+                <p>Segunda a sexta de 7 as 17h</p>
+                <p>(22) 2522-2222</p>
+                <p>(22) 99999-9999</p>
+                <p>contato@teste.com.br</p>
+            </div>
+            <div>
+                <p><b>Formas de pagamento</b></p>
+                <img src="./img/pagamento.png" alt="formas de pagamento">
+            </div>
+            <div>
+                <p><b>Forma de entrega</b></p>
+                <img src="./img/correios.png" alt="correio">
+            </div>
+            <div>
+                <p><b>Segurança e qualidade</b></p>
+                <img src="./img/segurança.png" alt="Segurança e qualidade" width="160">
+            </div>
+        </div>
+    </div>
         <div class="LOREM">
             <h5>LOREM IPSUM COMERCIO DE VESTUÁRIO LTDA.| CNPJ:01.111.000/0001-01 / RUA DAS COVES,100,CENTRO,NOVA FRIBURGO / RJ - 26.600-000</h5>
             <img src="./img/wx3.png" alt="wx3" width="60" height="50">
@@ -280,5 +309,7 @@
         </div>
     </footer>
     <script src="./produto.js"></script>
+    <script src="./menu.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

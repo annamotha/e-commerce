@@ -26,6 +26,9 @@ function getStarRating(rating) {
     return stars;
 }
 
+
+
+
 function desenharProdutosL(produtos) {
     console.log(produtos);
     const lancamentoContainer = document.querySelector('#produt-new');

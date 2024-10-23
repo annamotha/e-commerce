@@ -22,6 +22,9 @@ header{
     justify-content:space-between;
     margin: 0;
     overflow-x: hidden;
+    button{
+        display: none;
+    }
     
     .logo{
         padding: 10px 0 0 1%;
@@ -158,9 +161,37 @@ header{
     padding: 2% 0;
     font-size: 25px;
     font-family: sans-serif;
-    
+    .dots{
+        position: relative;
+            left: 28%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: end;
+            gap: 10px;
+            button{
+                border: none;
+                background-color: var(--white);
+                color: var(--gray);
+                cursor: pointer;
+            }
+            .dot.first{
+                background-color: var(--gray);
+            }
+            .dot{
+                margin-top: 5px;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                border: solid 2px var(--gray);
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
+            }
+
+    }
     .produts{
         display: flex;
+        flex-direction: row;
         justify-content: center;
         gap: 25px;
         margin: 50px 0;
@@ -382,6 +413,7 @@ header{
         padding: 2%;
         background-color: var(--black);
         color: var(--white);
+        
         h1{
             margin-bottom: 0;
             font-size: 50px;
@@ -439,6 +471,26 @@ header{
             }
             div{
                 display: flex;
+            }
+            
+        }
+        .dots-comment{
+            position: relative;
+            bottom: 20px;
+            padding: 80px 0 0 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            .dot{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: var(--white);
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
             }
             
         }
@@ -563,4 +615,209 @@ footer{
         }
     }
 
+}
+
+@media (min-width: 1450px) and (max-width: 1870px){
+    .links{
+        
+        li{
+            margin: 0 !important;
+        }
+    }
+    .end-header{
+        padding: 12px 2% 1% 0 !important;
+    }
+    .category{
+        .text{
+            margin-top: -60%;
+        }
+    }
+    .main-footer{
+        .image{
+            div{
+                img{
+                    width: 600px
+                }
+            }
+            .whatsapp{
+                img{
+                    width: 400px;
+                }
+            }
+        }
+    }
+
+}
+
+
+/* telas menores */
+@media (max-width: 480px) {
+    header{    
+        justify-content: space-evenly;  
+        button{
+            display: block;
+            border: none;
+            background-color: var(--white);
+        } 
+        #menu {
+            display: none;
+        }
+        
+        #menu.active {
+            display: flex; 
+            width: 100%;
+            flex-direction: column;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        padding: 5px 0;
+                    }
+                }
+            
+            
+        }
+
+        .end-header{
+            width: 30%;
+            .favorite{
+               display: none;
+            }            
+            .login{
+                .perfil{
+                    display: block;
+                }
+                a{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+            }
+            .shopping-cart{
+                padding-right:0;
+                a{
+                    margin-top: -1%;
+                }
+                .price{
+                    display: none;
+                }
+            }   
+        }
+    }
+    .produts{
+        flex-direction: column;
+    }
+    .information{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;  
+        gap: 20px;
+        div{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+    .category{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        height: auto;
+        padding: 3%;
+        gap: 10px;
+        .category-rigth{
+            img{
+                height: 115%;
+
+            }
+        }
+        .category-rigthh{
+            margin-top: 30%;
+        }
+        .category-left{
+            img{
+                height: 110%;
+            }
+            .text{
+                margin-top: -95%;
+        
+            }
+        }
+        .text{
+           margin-top: -65%;
+        }
+
+        .text h2 {
+            font-size: 50px; 
+        }
+    
+        .text p {
+            width: auto;
+            font-size: 15px;
+        }
+    
+        .text a {   
+            font-size: 14px; 
+        }     
+    }
+    footer{
+        .header-footer{     
+            flex-direction: column;
+            padding-bottom: 100px;
+            img{
+                margin-left: -28px;
+            }
+            div{
+                margin:0 ;
+            }
+            form{
+                margin-top: 10px;
+                input{
+                    padding: 5px 0 ;
+                    font-size: 12px;
+                }
+                .cadastro{
+                    font-size: 10px;
+                    border: var(--black) solid 2px;
+                    
+                }
+            }
+        }
+        .main-footer{
+           
+            .image{
+                flex-direction: column;
+                gap: 5px;
+                margin-top: -40px;
+                img{
+                    width: 300px;
+                }
+               .whatsapp{
+                    .whatsapp-footer{
+                        p{
+                            margin-left: 0;
+                        }
+                    }
+    
+               }
+            }
+            .information-footer{
+                display: grid;
+                grid-template-columns: 1fr 1fr; 
+            }
+        }
+        .LOREM{
+            font-size: 12px;  
+            
+            img{
+                margin-top: 15px;
+            }
+        }
+        .footer-end{
+           font-size: 11px;
+        
+        }
+    
+    }
+    
 }
