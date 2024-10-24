@@ -89,9 +89,12 @@ header{
         }
     }
 }
-@media (max-width: 504px){
+@media (min-width: 180px) and (max-width: 504px){
+    header{
+        width: 250%;
+    }
     .end-header{
-        width: 100%;
+        
         div{
             padding: 0 1% !important;
         }
@@ -112,6 +115,32 @@ header{
         }
     }
 
+}
+@media(max-width:179px){
+    header{
+        width: 450%;
+    }
+    .end-header{
+        
+        div{
+            padding: 0 1% !important;
+        }
+        .login{
+            .perfil{
+                display: block;
+            }
+            a{
+                display: none;
+            }
+            p{
+                display: none;
+            }
+
+        }
+        .price{
+            display: none;
+        }
+    }
 }
 
 main {
