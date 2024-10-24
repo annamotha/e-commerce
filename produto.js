@@ -124,6 +124,17 @@ function criarProdutoDiv(p) {
 
 function iniciarCarrossel(container) {
     const divs = container.children;
+    const dats = document.querySelectorAll('.dat');  
+    let indiceAtual = 0;  
+    
+
+    // Função para atualizar o estado ativo dos dots
+    const atualizarDats = (indice) => {
+        // Remove a classe 'active' de todos os dots
+        dats.forEach(dat => dat.classList.remove('active'));
+        // Adiciona a classe 'active' ao dot correspondente ao índice atual
+        dats[indice].classList.add('active');
+    };
 
     // Verifica se existem divs suficientes para fazer o carrossel
     if (divs.length > 1) {
@@ -134,13 +145,23 @@ function iniciarCarrossel(container) {
         const moverParaEsquerda = () => {
             const ultimoElemento = divs[divs.length - 1];
             container.insertBefore(ultimoElemento, divs[0]);
+            
+            // Atualiza o índice e o estado dos dots
+            indiceAtual = (indiceAtual - 1 + divs.length) % divs.length;
+            atualizarDats(indiceAtual);
         };
 
         // Função para mover o carrossel à direita (próximo)
         const moverParaDireita = () => {
             const primeiroElemento = divs[0];
             container.appendChild(primeiroElemento);
+            
+            // Atualiza o índice e o estado dos dots
+            indiceAtual = (indiceAtual + 1) % divs.length;
+            atualizarDats(indiceAtual);
         };
+
+    
         
         prevButton.forEach(button => {
             button.addEventListener('click', moverParaEsquerda);
@@ -148,6 +169,8 @@ function iniciarCarrossel(container) {
         nextButton.forEach(button => {
             button.addEventListener('click', moverParaDireita);
         });
+
+        atualizarDats(indiceAtual);
 
         /* prevButton.addEventListener('click', moverParaEsquerda);
         nextButton.addEventListener('click', moverParaDireita); */

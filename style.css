@@ -161,7 +161,7 @@ header{
     padding: 2% 0;
     font-size: 25px;
     font-family: sans-serif;
-    .dots{
+    .dats{
         position: relative;
             left: 28%;
             transform: translateX(-50%);
@@ -174,10 +174,8 @@ header{
                 color: var(--gray);
                 cursor: pointer;
             }
-            .dot.first{
-                background-color: var(--gray);
-            }
-            .dot{
+            
+            .dat{
                 margin-top: 5px;
                 width: 5px;
                 height: 5px;
@@ -187,6 +185,9 @@ header{
                 transition: background-color 0.3s ease;
                 
             }
+            .dat.active{
+                background-color: var(--gray);
+            }
 
     }
     .produts{
@@ -195,6 +196,7 @@ header{
         justify-content: center;
         gap: 25px;
         margin: 50px 0;
+        overflow: hidden;
         h4{
             background-color: var(--gray);
             width: 60px;
@@ -784,6 +786,7 @@ footer{
             }   
         }
     }
+    
     .information{
         p{
             font-size: 14px;
@@ -906,6 +909,10 @@ footer{
             }   
         }
     }
+    .produts{
+        
+    }
+
     
     .information{
         display: grid;
@@ -1043,6 +1050,9 @@ footer{
             }   
         }
     }
+    .produt{
+        flex-basis: 50%;
+    }
     .information{
         display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -1070,7 +1080,10 @@ footer{
         h3{
             font-size: 38px !important;
         }
-        comments-box{
+        .comment.a{
+            display: none;
+        }
+        .comment.b{
             display: none;
         }
     }
@@ -1089,8 +1102,6 @@ footer{
             margin-top: 5%;
         }
         form{
-            grid-column: 2 / 3; 
-            grid-row: 2 / 3;
             display: flex;
             flex-direction: column;
 
@@ -1142,50 +1153,99 @@ footer{
 
 /* telas menores */
 @media (max-width: 399px) {
+    header{    
+        justify-content: space-evenly;  
+        button{
+            display: block;
+            border: none;
+            background-color: var(--white);
+        } 
+        #menu {
+            display: none !important;
+        }
+        
+        #menu.active {
+            display: flex; 
+            width: 100%;
+            flex-direction: column;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        padding: 5px 0;
+                    }
+                }
+            
+            
+        }
+    
+        .end-header{
+            width: 30%;
+            .favorite{
+               display: none;
+            }            
+            .login{
+                .perfil{
+                    display: block;
+                }
+                a{
+                    display: none;
+                }
+                p{
+                    display: none;
+                }
+            }
+            .shopping-cart{
+                padding-right:0;
+                a{
+                    margin-top: -1%;
+                }
+                .price{
+                    display: none;
+                }
+            }   
+        }
+    }
     .produts{
         flex-direction: column;
     }
-    .category{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        height: auto;
-        padding: 3%;
-        gap: 10px;
-        .category-rigth{
-            img{
-                height: 115%;
-
+    .information{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;  
+        gap: 20px;
+        div{
+            p{
+                font-size: 15px;
             }
         }
-        .category-rigthh{
-            margin-top: 30%;
-        }
-        .category-left{
-            img{
-                height: 110%;
-            }
-            .text{
-                margin-top: -95%;
-        
-            }
-        }
-        .text{
-           margin-top: -65%;
-        }
-
-        .text h2 {
-            font-size: 50px; 
-        }
-    
-        .text p {
-            width: auto;
-            font-size: 15px;
-        }
-    
-        .text a {   
-            font-size: 14px; 
-        }     
     }
+    .category{
+        padding: 5% 5%;
+        .text{
+            margin-top: -100% !important;
+            h2{
+                font-size: 35px;
+            }
+        }
+    }
+
+    .comments-black{
+        h1{
+            font-size: 40px !important;
+        }
+        h3{
+            font-size: 38px !important;
+            
+        }
+        .comment.a{
+            display: none;
+        }
+        .comment.b{
+            display: none;
+        }
+    }
+
     footer{
         .header-footer{     
             flex-direction: column;
@@ -1197,15 +1257,12 @@ footer{
                 margin:0 ;
             }
             form{
-                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+    
                 input{
-                    padding: 5px 0 ;
-                    font-size: 12px;
-                }
-                .cadastro{
-                    font-size: 10px;
-                    border: var(--black) solid 2px;
-                    
+                    margin: 5px;
+    
                 }
             }
         }
@@ -1215,26 +1272,34 @@ footer{
                 flex-direction: column;
                 gap: 5px;
                 margin-top: -40px;
+                margin-left: 0 !important;
+
                 img{
-                    width: 300px;
+                    width: 220px;
                 }
                .whatsapp{
+                margin-bottom: 50px;
                     .whatsapp-footer{
+                        h2{
+                            font-size: 45px !important;
+                        }
                         p{
-                            margin-left: 0;
+                            margin-left: -5% !important;
+                            
                         }
                     }
     
                }
             }
             .information-footer{
-                display: grid;
-                grid-template-columns: 1fr 1fr; 
+                display: flex;
+                flex-direction: column;
+                padding: 40px; 
             }
         }
         .LOREM{
             font-size: 12px;  
-            
+            padding-left: 3% !important;
             img{
                 margin-top: 15px;
             }
