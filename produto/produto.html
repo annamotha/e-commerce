@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./produto.css">
+    <title>produto</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo.png" alt="LOGO" width="120">
+        </div>
+        <div class="end-header">
+            <div class="search">
+                <a href="#">
+                    <img src="../img/search.png" alt="pesquisar" width="27">
+                </a>
+            </div>
+            <div class="favorite">
+                <a href="#">
+                    <img src="../img/like.png" alt="like" width="27" heigh="27">
+                    <span class="items">0</span>
+                </a>
+            </div>
+            <div class="login">
+                <a href="#" class="perfil"><img src="../img/icon.png" alt="icon" width="22" height="22"></a>
+                <a href="#">Login</a>
+                <p>|</p> 
+                <a href="#">Cadastre-se</a>
+            </div>
+            <div class="shopping-cart">
+                <a href="#">
+                    <img src="../img/shopping-cart.png" alt="Carrinho de compras" width="22" heigh="22">
+                    <span class="items">0</span>
+                </a>
+                <span class="price">R$ 0,00</span>
+                
+            </div>
+    </header>
+    
+    <main> 
+        <div class="product-grid">
+            <div class="product-gallery">
+                <img class="main-image" src="../img/modelo01.png" alt="produto" width="200" height="600">
+                    <div class="gallery-image">
+                        <img class="outer-image" src="../img/modelo02.png" alt="produto" width="150" height="200">
+                        <img class="outer-image" src="../img/modelo03.png" alt="produto" width="150" height="200">
+                        <img class="outer-image" src="../img/modelo04.png" alt="produto" width="150" height="200">
+                    </div>
+            </div>
+            <div id="product-info">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                <div>★★★★★ <span>(128 avaliações)</span></div>
+                <div class="price">R$ 55,90</div>
+                <div>
+                <p>Cor:</p>
+                    <div class="color-options">
+                        <div class="color-option selected" style="background-color: #000000;"></div>
+                        <div class="color-option" style="background-color: aqua;"></div>
+                        <div class="color-option" style="background-color: #ff00a2;"></div>
+                    </div>
+                </div>
+
+                <button class="add-shopping-cart">Adicionar ao Carrinho</button>
+
+                <div class="information">
+                    <p>Frete grátis a partir de R$ 199 (SUDESTE) e de R$ 299 (BRASIL)</p>
+                    <p>10x sem juros no cartão</p>
+                </div>
+
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active">Descrição</button>
+                        <button class="tab-button">Especificações</button>
+                        <button class="tab-button">Avaliações</button>
+                    </div>
+            
+                    <div class="tab-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam! Aut, ipsam amet, dolores inventore odit voluptatem minima unde nisi debitis ipsum ipsa repellendus! Aliquid id dolor ducimus doloremque suscipit?</p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {    
+      const mainImage = document.querySelector('.main-image');
+      const thumbnails = document.querySelectorAll('.outer-image');
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          const newSrc = this.src;
+          const oldSrc = mainImage.src;
+          
+          // Animate the transition
+          mainImage.style.opacity = '0';
+          setTimeout(() => {
+            mainImage.src = newSrc;
+            mainImage.style.opacity = '1';
+          }, 200);
+        });
+      });
+    
+      // Tab switching
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContent = document.querySelector('.tab-content');
+      const tabContents = {
+        'Descrição': `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam! Aut, ipsam amet, dolores inventore odit voluptatem minima unde nisi debitis ipsum ipsa repellendus! Aliquid id dolor ducimus doloremque suscipit?</p>`,
+        'Especificações': `
+          <ul style="list-style: none; padding: 0;">
+            <li><strong>Lorem:</strong> lorem ipsum dolor sit</li>
+            <li><strong>Lorem:</strong> lorem ipsum dolor sit</li>
+            <li><strong>Lorem:</strong> lorem ipsum dolor sit</li>
+            <li><strong>Lorem:</strong> lorem ipsum dolor sit </li>
+            <li><strong>Lorem:</strong> lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam! Aut, </li>
+          </ul>
+        `,
+        'Avaliações': `
+          <div style="max-height: 300px; overflow-y: auto;">
+            <div style="border-bottom: 1px solid #eee; padding: 10px 0;">
+              <div>★★★★★</div>
+              <strong>Eliana A.</strong>
+              <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam! </p>
+            </div>
+            <div style="border-bottom: 1px solid #eee; padding: 10px 0;">
+              <div>★★★★☆</div>
+              <strong>Eliana A.</strong>
+              <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nam! </p>
+            </div>
+          </div>
+        `
+      };
+    
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Animate tab content change
+          tabContent.style.opacity = '0';
+          setTimeout(() => {
+            tabContent.innerHTML = tabContents[this.textContent];
+            tabContent.style.opacity = '1';
+          }, 200);
+        });
+      });
+    
+      // Add to cart animation
+      const addToCartButton = document.querySelector('.add-shopping-cart');
+      addToCartButton.addEventListener('click', function() {
+        this.textContent = '✓ Adicionado!';
+        this.style.backgroundColor = '#27ae60';
+        setTimeout(() => {
+          this.textContent = 'Adicionar ao Carrinho';
+          this.style.backgroundColor = '';
+        }, 2000);
+      });
+    });
+    </script>
+</body>
+</html>

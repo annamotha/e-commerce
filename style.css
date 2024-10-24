@@ -104,6 +104,7 @@ header{
             .price{
                 color: var(--gray);
                 white-space: nowrap;
+                font-size: 15px;
             }
 
         }
@@ -666,7 +667,6 @@ footer{
         background-color: var(--white);
         cursor: pointer;
     } 
-    
     .links{
         ul{
             padding-left: 20px;
@@ -817,7 +817,7 @@ footer{
         .text{
             margin-top: -90% !important;
             h2{
-                font-size: 80px;
+                font-size: 80px !important;
             }
         }
     }
@@ -951,7 +951,7 @@ footer{
         .text{
             margin-top: -90% !important;
             h2{
-                font-size: 65px;
+                font-size: 65px !important;
             }
         }
     }
@@ -1096,7 +1096,7 @@ footer{
         .text{
             margin-top: -90% !important;
             h2{
-                font-size: 45px;
+                font-size: 45px !important;
             }
         }
     }
