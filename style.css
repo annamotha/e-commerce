@@ -24,6 +24,8 @@ header{
     overflow-x: hidden;
     button{
         display: none;
+        
+
     }
     
     .logo{
@@ -620,6 +622,30 @@ footer{
 }
 
 @media (min-width: 1450px) and (max-width: 1870px){
+    button{
+        display: block;
+        border: none;
+        background-color: var(--white);
+        cursor: pointer;
+    } 
+    #menu {
+        display: none !important;
+    }
+    
+    #menu.active {
+        display: flex; 
+        width: 100%;
+        flex-direction: column;
+            ul{
+                display: flex;
+                flex-direction: column;
+                a{
+                    padding: 5px 0;
+                }
+            }
+        
+        
+    }
     .links{
         
         li{
@@ -652,6 +678,28 @@ footer{
 }
 
 @media (min-width: 1200px) and (max-width: 1449px){
+    button{
+        display: block;
+        border: none;
+        background-color: var(--white);
+        cursor: pointer;
+    } 
+    #menu {
+        display: none !important;
+    }
+    
+    #menu.active {
+        display: flex; 
+        width: 100%;
+        flex-direction: column;
+            ul{
+                display: flex;
+                flex-direction: column;
+                a{
+                    padding: 5px 0;
+                }
+            }        
+    }
     .links{
         ul{
             padding-left: 20px;
@@ -744,6 +792,7 @@ footer{
             display: block;
             border: none;
             background-color: var(--white);
+            cursor: pointer;
         } 
         #menu {
             display: none;
@@ -752,7 +801,10 @@ footer{
         #menu.active {
             display: flex; 
             width: 100%;
-            flex-direction: column;
+            top: 4%;
+            position: absolute;
+            background-color: var(--white);
+            z-index: 1;
                 ul{
                     display: flex;
                     flex-direction: column;
@@ -862,6 +914,7 @@ footer{
             display: block;
             border: none;
             background-color: var(--white);
+            cursor: pointer;
         } 
         #menu {
             display: none;
@@ -870,7 +923,11 @@ footer{
         #menu.active {
             display: flex; 
             width: 100%;
-            flex-direction: column;
+            top: 4%;
+            position: absolute;
+            background-color: var(--white);
+            padding-left: 10%;
+            z-index: 1;
                 ul{
                     display: flex;
                     flex-direction: column;
@@ -996,23 +1053,29 @@ footer{
 @media(min-width: 400px) and (max-width: 749px){
     header{    
         justify-content: space-evenly;  
+
         button{
             display: block;
             border: none;
             background-color: var(--white);
+            cursor: pointer;
         } 
         #menu {
-            display: none !important;
+            display: none;
         }
         
         #menu.active {
             display: flex; 
             width: 100%;
-            flex-direction: column;
+            top: 4%;
+            position: absolute;
+            background-color: var(--white);
+            z-index: 1;
                 ul{
                     display: flex;
                     flex-direction: column;
                     a{
+                        width: 50%;
                         padding: 5px 0;
                     }
                 }
@@ -1156,25 +1219,35 @@ footer{
             display: block;
             border: none;
             background-color: var(--white);
+            cursor: pointer;
         } 
         #menu {
-            display: none !important;
+            display: none ;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%; 
+            background-color: var(--white);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         #menu.active {
             display: flex; 
             width: 100%;
-            flex-direction: column;
+            top: 8%;
+            position: absolute;
+            background-color: var(--white);
+            z-index: 1;
                 ul{
                     display: flex;
                     flex-direction: column;
+                    z-index: 1;
                     a{
                         padding: 5px 0;
                     }
-                }
-            
-            
+                }            
         }
+        
     
         .end-header{
             width: 30%;
@@ -1218,7 +1291,8 @@ footer{
         }
     }
     .category{
-        padding: 5% 5%;
+        padding: 20% 5%;
+        height: 60vh;
         .text{
             margin-top: -100% !important;
             h2{
