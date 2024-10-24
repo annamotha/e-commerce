@@ -1,7 +1,7 @@
 :root{
     --gray: #5d5d5d;
     --item: #5a5a5a;
-    --background: #ede2e2;
+    --background: #e9e3e7;
     --black: black;
     --white: white;
     --yellow: #e6af3a;
@@ -91,7 +91,7 @@ header{
 }
 @media (min-width: 180px) and (max-width: 504px){
     header{
-        width: 250%;
+        width: 110%;
     }
     .end-header{
         

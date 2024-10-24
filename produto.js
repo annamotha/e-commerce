@@ -88,7 +88,7 @@ function criarProdutoDivL(p) {
             <p class="preco">R$ ${p.preco}</p>
             <p class="boleto">no boleto</p>
             <p class="parcela">em até ${p.parcela ? p.parcela : '10x de R$ ' + (p.preco / 10).toFixed(2)}</p>
-            <a href="#" class="compre">COMPRE AGORA</a>
+            <a href="./produto/produto.html" class="compre">COMPRE AGORA</a>
         </div>
     `;
 
@@ -115,7 +115,7 @@ function criarProdutoDiv(p) {
             <p class="preco">R$ ${p.preco}</p>
             <p class="boleto">no boleto</p>
             <p class="parcela">em até ${p.parcela ? p.parcela : '10x de R$ ' + (p.preco / 10).toFixed(2)}</p>
-            <a href="#" class="compre">COMPRE AGORA</a>
+            <a href="./produto/produto.html" class="compre">COMPRE AGORA</a>
         </div>
     `;
 
