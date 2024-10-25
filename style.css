@@ -327,7 +327,7 @@ header{
 }
 @font-face{
     font-family: Phillips;
-    src: url("./Phillips Muler Signature.ttf");
+    src: url("./fonte/Phillips\ Muler\ Signature.ttf");
 }
 .category{
     background-color: var(--black);
